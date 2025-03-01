@@ -49,10 +49,10 @@ const userSchema = new Schema<User>({
   experience: {
     type: Number,
   },
-
+  
   team: {
-    type: String,
-    default: null,
+    type: mongoose.Types.ObjectId,
+    ref: "Team"
   },
 });
 

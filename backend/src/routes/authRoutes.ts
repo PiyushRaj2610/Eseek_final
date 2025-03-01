@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import User from "../schemas/User";
+import User from "../models/user.model";
 
 interface AuthRequest extends Request {
   user: any
 }
 
-export const authMiddleware = async (req: AuthRequest, res: Response, next: NextFunction) => {
+const authRoute = async (req: AuthRequest, res: Response, next: NextFunction) => {
   const token = req.header("Authorization")?.split(" ")[1];
 
   if(!token){
@@ -25,3 +25,5 @@ export const authMiddleware = async (req: AuthRequest, res: Response, next: Next
     })
   }
 }
+
+export default authRoute;
