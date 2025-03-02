@@ -5,7 +5,7 @@ import { Join } from "./pages/Join.js";
 import { RecoilRoot } from "recoil";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Games } from "./pages/Games.js";
-import { Profile } from "./pages/Profile.js";
+import Profile from "./pages/Profile.js";
 
 function App() {
   return (
